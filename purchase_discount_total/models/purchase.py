@@ -3,7 +3,7 @@ import openerp.addons.decimal_precision as dp
 
 
 class SaleOrder(models.Model):
-    _inherit = "sale.order"
+    _inherit = "purchase.order"
 
     @api.depends('order_line.price_total')
     def _amount_all(self):
@@ -162,7 +162,7 @@ class AccountTax(models.Model):
 
 
 class SaleOrderLine(models.Model):
-    _inherit = "sale.order.line"
+    _inherit = "purchase.order.line"
 
     discount = fields.Float(string='Discount (%)', digits=(16, 20), default=0.0)
 

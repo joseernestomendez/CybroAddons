@@ -2,7 +2,7 @@ from openerp import fields, models
 
 
 class DiscountSaleReport(models.Model):
-    _inherit = 'sale.report'
+    _inherit = 'purchase.report'
 
     discount = fields.Float('Discount', readonly=True)
 
